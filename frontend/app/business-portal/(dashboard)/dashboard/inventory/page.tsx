@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function InventoryPage() { return <ModulePage eyebrow="Stock control" title="Inventory and serials" description="Receive, locate, reserve, and assign variant-level stock with individual serial-number or IMEI traceability." icon="inventory" primaryAction="Receive stock" capabilities={["Variant-level stock intake and adjustments", "Unique serial and IMEI registration", "Serial assignment during billing", "Low-stock alerts and movement history"]} />; }

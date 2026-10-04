@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function CatalogPage() { return <ModulePage eyebrow="Merchandising" title="Product catalog" description="Manage electronics products, structured specifications, variants, pricing, media, stock visibility, and warranty choices." icon="catalog" primaryAction="Add product" capabilities={["Dynamic specification templates by category", "Variant matrix for memory, color and region", "Official and shop warranty price options", "Stock state, media, manuals and unboxing links"]} />; }

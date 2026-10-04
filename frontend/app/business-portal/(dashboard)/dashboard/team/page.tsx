@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function TeamPage() { return <ModulePage eyebrow="Administration" title="Team and access" description="Assign least-privilege access to staff according to their operational responsibilities." icon="team" primaryAction="Invite team member" capabilities={["Admin and inventory-manager roles", "Technician and RMA-officer roles", "Salesman and accountant roles", "Granular permission assignment and audit history"]} />; }

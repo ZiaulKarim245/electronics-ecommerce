@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function OrdersPage() { return <ModulePage eyebrow="Order operations" title="Orders and fraud review" description="Verify and fulfil online orders while reviewing courier history, phone risk, payment state, and stock exceptions." icon="orders" primaryAction="Create order" capabilities={["Risk flags from return ratio and blacklists", "Variant swap and manual discount controls", "Advance-payment verification", "Fulfilment, courier and status timeline"]} />; }

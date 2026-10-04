@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function CampaignsPage() { return <ModulePage eyebrow="Growth" title="Campaign landing pages" description="Create managed flash-sale and pre-order landing pages with focused products, schedules, and express-order forms." icon="campaigns" primaryAction="Create campaign" capabilities={["Offer slug and publish controls", "Countdown and campaign scheduling", "Featured product configuration", "Express-order lead collection"]} />; }

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="techhub-emblem-grad" x1="5" y1="3" x2="39" y2="41" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ef4a23" />
+      <stop offset="1" stop-color="#1b4382" />
+    </linearGradient>
+    <linearGradient id="techhub-inner-grad" x1="11" y1="9" x2="33" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10b981" />
+      <stop offset="1" stop-color="#ef4a23" />
+    </linearGradient>
+  </defs>
+  <polygon points="22,3 39,12.5 39,31.5 22,41 5,31.5 5,12.5" fill="url(#techhub-emblem-grad)" stroke="#ef4a23" stroke-width="1.5" stroke-linejoin="round"/>
+  <polygon points="22,9 33,15.5 33,28.5 22,35 11,28.5 11,15.5" fill="#081621" stroke="url(#techhub-inner-grad)" stroke-width="1.2"/>
+  <path d="M16 17H28M22 17V30" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="22" cy="17" r="1.8" fill="#ef4a23"/>
+</svg>

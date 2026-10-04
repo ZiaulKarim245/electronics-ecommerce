@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function RecoveryPage() { return <ModulePage eyebrow="Sales recovery" title="Incomplete checkouts" description="Prioritize recoverable carts and give authorized sales staff direct call or WhatsApp follow-up actions." icon="recovery" primaryAction="Create recovery task" capabilities={["Live incomplete-checkout queue", "Cart value and recency prioritization", "One-click call and WhatsApp actions", "Outcome, owner and follow-up tracking"]} />; }

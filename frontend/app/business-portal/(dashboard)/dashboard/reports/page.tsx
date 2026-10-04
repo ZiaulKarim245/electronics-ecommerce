@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function ReportsPage() { return <ModulePage eyebrow="Finance and insight" title="Reports and accounting" description="Review sales, gross margin, cash settlement, operating expense, and operational performance." icon="reports" primaryAction="Export report" capabilities={["COGS and selling-price margin reporting", "Daily POS cash settlement", "Operating expense records", "CSV and Excel export"]} />; }

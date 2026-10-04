@@ -1,0 +1,444 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Surface & Canvas Tokens */
+  --background: #f2f4f8;
+  --foreground: #081621;
+  --muted: #64748b;
+
+  /* Brand Tokens (Star Tech & Modern Tech Retail) */
+  --primary: #ef4a23;
+  --primary-dark: #d51e0b;
+  --secondary: #3749bb;
+  --secondary-hover: #2b3990;
+
+  /* Component Surface & Borders */
+  --card: #ffffff;
+  --card-border: #e2e8f0;
+  --surface: #f8fafc;
+  --surface-border: #edf2f7;
+
+  /* Header & Navigation */
+  --header-bg: #081621;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-secondary-hover: var(--secondary-hover);
+
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-surface: var(--surface);
+  --color-surface-border: var(--surface-border);
+  --color-header: var(--header-bg);
+
+  --font-sans: "Roboto", "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono: "JetBrains Mono", Consolas, monospace;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Interactive Elements Cursor Pointer */
+button,
+a,
+select,
+summary,
+label,
+[role="button"],
+[role="tab"],
+[role="link"],
+[role="menuitem"],
+[role="checkbox"],
+[role="radio"],
+[role="switch"],
+[role="option"],
+[tabindex]:not([tabindex="-1"]),
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+input[type="range"],
+input[type="file"],
+label[for],
+label:has(input:not(:disabled)),
+[onclick],
+.cursor-pointer {
+  cursor: pointer;
+}
+
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled,
+[aria-disabled="true"],
+label:has(input:disabled) {
+  cursor: not-allowed;
+}
+
+/* Global Consistent Focus & Active State */
+button:focus:not(:focus-visible),
+[role="button"]:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+button:focus-visible,
+button:active,
+a:focus,
+a:focus-visible,
+a:active,
+[role="button"]:focus-visible,
+[role="button"]:active,
+summary:focus-visible,
+summary:active,
+input:focus,
+select:focus,
+textarea:focus,
+[tabindex]:not([tabindex="-1"]):focus-visible {
+  outline: 2px solid #000000 !important;
+  outline-offset: 2px !important;
+}
+
+/* Dark Backgrounds (Header, Footer, Dark Containers): White Border */
+header button:focus-visible,
+header button:active,
+header a:focus,
+header a:focus-visible,
+header a:active,
+header [role="button"]:focus-visible,
+header [role="button"]:active,
+footer button:focus-visible,
+footer button:active,
+footer a:focus,
+footer a:focus-visible,
+footer a:active,
+footer [role="button"]:focus-visible,
+footer [role="button"]:active,
+.bg-header button:focus-visible,
+.bg-header button:active,
+.bg-header a:focus,
+.bg-header a:focus-visible,
+.bg-header a:active,
+.bg-secondary button:focus-visible,
+.bg-secondary button:active,
+.bg-secondary a:focus,
+.bg-secondary a:focus-visible,
+.bg-secondary a:active,
+[class*="bg-slate-9"] button:focus-visible,
+[class*="bg-slate-9"] button:active,
+[class*="bg-slate-9"] a:focus,
+[class*="bg-slate-9"] a:focus-visible,
+[class*="bg-slate-9"] a:active,
+[class*="bg-slate-8"] button:focus-visible,
+[class*="bg-slate-8"] button:active,
+[class*="bg-slate-8"] a:focus,
+[class*="bg-slate-8"] a:focus-visible,
+[class*="bg-slate-8"] a:active,
+.dark-focus button:focus-visible,
+.dark-focus button:active,
+.dark-focus a:focus,
+.dark-focus a:focus-visible,
+.dark-focus a:active {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+header input:not(.search-input):focus,
+footer input:focus {
+  outline: 2px solid #ffffff !important;
+  outline-offset: 2px !important;
+}
+
+/* Hide scrollbar for clean horizontal ribbon */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Production Compare Button Style */
+.btn-compare {
+  background-color: #dbe2e8 !important;
+  border: 1px solid #cfd7df !important;
+  color: #1c3554 !important;
+}
+
+.btn-compare:hover {
+  background-color: #cfd8df !important;
+}
+
+/* Glow Background Utility */
+.hero-glow {
+  background: radial-gradient(circle at 75% 35%, rgb(6 182 212 / 20%), transparent 40%),
+    linear-gradient(120deg, rgb(15 23 42), rgb(2 6 23));
+}
+
+/* Print Optimization for Quotations */
+@media print {
+  body {
+    background: #ffffff;
+    color: #0f172a;
+  }
+}
+
+/* ── TECHHUB Logo Sine-Wave Color Animation ── */
+@keyframes logoTech {
+
+  0%,
+  100% {
+    color: #ffffff;
+  }
+
+  50% {
+    color: #ef4a23;
+  }
+}
+
+@keyframes logoHub {
+
+  0%,
+  100% {
+    color: #ef4a23;
+  }
+
+  50% {
+    color: #ffffff;
+  }
+}
+
+.logo-tech-animate {
+  animation: logoTech 6s ease-in-out infinite;
+}
+
+.logo-hub-animate {
+  animation: logoHub 6s ease-in-out infinite;
+}
+
+/* ── PC Builder Button Sine-Wave Pulse Animation ── */
+@keyframes pcBuilderAnimate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pc-builder-animate {
+  background: linear-gradient(270deg, #3749bb, #ef4a23, #c0392b, #3749bb);
+  background-size: 300% 300%;
+  animation: pcBuilderAnimate 10s ease-in-out infinite;
+  box-shadow: 0 4px 18px rgba(55, 73, 187, 0.45);
+}
+
+/* ── Brand Gradient Text Utilities ── */
+
+/* Gradient text always on (active/open state) */
+.gradient-text {
+  background: linear-gradient(135deg, #3749bb 0%, #ef4a23 60%, #c0392b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Animated gradient text on hover:
+   Starts at 0% showing original dark color,
+   sweeps to 100% revealing the brand gradient on hover. */
+.hover-gradient-text {
+  background: linear-gradient(90deg, #000000 0%, #000000 40%, #2b3990 60%, #d93616 80%, #a92f3d 90%);
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease-in-out;
+}
+
+.hover-gradient-text:hover,
+.group:hover>.hover-gradient-text,
+.nav-item-active.hover-gradient-text {
+  background-position: 100% 0%;
+}
+
+/* Nav bar bottom border — always present, color driven by CSS hover & active state */
+/* transition must list BOTH properties since this declaration overrides hover-gradient-text's transition in the cascade */
+.nav-border-hover {
+  border-bottom-style: solid;
+  border-bottom-color: transparent;
+  border-bottom-width: 3.5px;
+  transition: background-position 0.6s ease-in-out, border-bottom-color 0.5s ease-in-out;
+}
+
+.nav-border-hover:hover,
+.nav-item-active.nav-border-hover {
+  border-bottom-color: var(--primary);
+}
+
+/* Light variant — for white text on dark backgrounds (header buttons) */
+.hover-gradient-text-light {
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 40%, #3749bb 60%, #ef4a23 80%, #c0392b 90%);
+  background-size: 300% 100%;
+  background-position: 0% 0%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease-in-out;
+}
+
+/* Triggered by direct hover OR parent group hover */
+.hover-gradient-text-light:hover,
+.group:hover .hover-gradient-text-light {
+  background-position: 100% 0%;
+}
+
+/* Business portal uses the same TechHub storefront palette while retaining
+   its denser operations layout. These scoped aliases keep every portal module
+   visually consistent without changing storefront components. */
+.business-portal-shell .bg-slate-950,
+.business-portal-shell .bg-slate-900 {
+  background-color: var(--header-bg) !important;
+}
+
+.business-portal-shell .bg-slate-800 {
+  background-color: #122330 !important;
+}
+
+.business-portal-shell .bg-slate-100 {
+  background-color: var(--background) !important;
+}
+
+.business-portal-shell .text-slate-900 {
+  color: var(--foreground) !important;
+}
+
+.business-portal-shell .text-slate-600,
+.business-portal-shell .text-slate-500 {
+  color: var(--muted) !important;
+}
+
+.business-portal-shell .text-cyan-400,
+.business-portal-shell .text-cyan-500,
+.business-portal-shell .text-cyan-600 {
+  color: var(--primary) !important;
+}
+
+.business-portal-shell .text-cyan-700,
+.business-portal-shell .text-cyan-800,
+.business-portal-shell .text-cyan-900 {
+  color: var(--secondary) !important;
+}
+
+.business-portal-shell .bg-cyan-400,
+.business-portal-shell .bg-cyan-500,
+.business-portal-shell .bg-cyan-600 {
+  background-color: var(--primary) !important;
+}
+
+.business-portal-shell .bg-cyan-50 {
+  background-color: color-mix(in srgb, var(--primary) 8%, white) !important;
+}
+
+.business-portal-shell .bg-cyan-100 {
+  background-color: color-mix(in srgb, var(--primary) 14%, white) !important;
+}
+
+.business-portal-shell .border-cyan-500,
+.business-portal-shell .border-cyan-600 {
+  border-color: var(--primary) !important;
+}
+
+.business-portal-shell .ring-cyan-200,
+.business-portal-shell .ring-cyan-500\/10 {
+  --tw-ring-color: color-mix(in srgb, var(--primary) 20%, transparent) !important;
+}
+
+.business-portal-shell .hover\:bg-slate-800:hover {
+  background-color: #122330 !important;
+}
+
+.business-portal-shell .hover\:bg-slate-100:hover {
+  background-color: var(--surface) !important;
+}
+
+/* Custom Select & Option Styling for clean production look */
+select {
+  accent-color: var(--secondary);
+}
+
+select option:checked,
+select option:hover {
+  background-color: #1a73e8 !important;
+  color: #ffffff !important;
+}
+
+/* ── Production E-commerce Card Hover: Smooth Drop-Shadow ──
+   Rule 1 (Fast): 220ms transition (150ms-300ms sweet spot)
+   Rule 2 (Mobile-safe): Wrapped in @media (hover: hover)
+   Rule 3 (Contrast): Rich layered drop-shadow + border contrast
+*/
+@media (hover: hover) {
+  .ecommerce-card-hover {
+    transition: box-shadow 220ms cubic-bezier(0.4, 0, 0.2, 1), border-color 220ms cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  .ecommerce-card-hover:hover {
+    box-shadow: 0 10px 25px -4px rgba(8, 22, 33, 0.12), 0 4px 10px -2px rgba(8, 22, 33, 0.06) !important;
+    border-color: #cbd5e1 !important;
+  }
+}
+
+/* ── Clean Print Stylesheet for Commercial Invoices ── */
+@media print {
+  @page {
+    margin: 12mm;
+    size: A4 portrait;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12px !important;
+  }
+
+  /* Reset all background shadows and borders for paper */
+  .shadow-xs,
+  .shadow-sm,
+  .shadow-md,
+  .shadow-lg,
+  .shadow-xl {
+    box-shadow: none !important;
+  }
+
+  .print-invoice-card {
+    border: 1px solid #000000 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+}

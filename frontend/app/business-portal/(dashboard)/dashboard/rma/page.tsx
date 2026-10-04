@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function RmaPage() { return <ModulePage eyebrow="After-sales service" title="RMA and warranty" description="Track customer devices through inspection, repair, replacement, return, and distributor-service workflows." icon="rma" primaryAction="Open service ticket" capabilities={["Serial-linked warranty validation", "Repair and replacement status workflow", "Technician notes and customer updates", "Official distributor claim tracking"]} />; }

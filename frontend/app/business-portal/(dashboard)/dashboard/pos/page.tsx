@@ -1,0 +1,2 @@
+import ModulePage from "@/components/business-portal/ModulePage";
+export default function PosPage() { return <ModulePage eyebrow="Physical retail" title="POS and quotations" description="Support fast counter sales, barcode or IMEI scanning, thermal receipts, and customer price quotations." icon="pos" primaryAction="Open register" capabilities={["Barcode and IMEI scanner input", "58mm and 80mm receipt layouts", "Walk-in customer checkout", "Printable and downloadable quotations"]} />; }
